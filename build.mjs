@@ -1,7 +1,7 @@
 import { mkdir, copyFile, readdir } from 'node:fs/promises';
 
 await mkdir('dist', { recursive: true });
-const required = ['index.html', 'styles.css', 'app.js', 'data.js', 'manifest.webmanifest', 'sw.js'];
+const required = ['index.html', 'styles.css', 'app.js', 'data.js', 'theme1.js', 'manifest.webmanifest', 'sw.js'];
 for (const file of required) {
   try {
     await copyFile(file, `dist/${file}`);
