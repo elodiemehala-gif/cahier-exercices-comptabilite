@@ -1,0 +1,17 @@
+import { mkdir, copyFile, readdir } from 'node:fs/promises';
+
+await mkdir('dist', { recursive: true });
+const required = ['index.html', 'styles.css', 'app.js', 'data.js', 'manifest.webmanifest', 'sw.js'];
+for (const file of required) {
+  try {
+    await copyFile(file, `dist/${file}`);
+  } catch (error) {
+    if (file !== 'sw.js') throw error;
+  }
+}
+try {
+  const icons = await readdir('icons');
+  await mkdir('dist/icons', { recursive: true });
+  for (const icon of icons) await copyFile(`icons/${icon}`, `dist/icons/${icon}`);
+} catch {}
+console.log('Application copiée dans dist/');
