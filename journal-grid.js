@@ -2,7 +2,7 @@
   const app=document.querySelector('#app');
   if(!app)return;
 
-  const JOURNAL_PATTERN=/(?:au\s+journal|dans\s+le\s+journal|journalis(?:er|ez)|comptabilis(?:er|ez)|pass(?:er|ez)\s+(?:l['’]\s*)?écriture|enregistr(?:er|ez)[^.!?]*(?:écriture|opération)|écritures?\s+(?:comptables?|nécessaires?|d['’]inventaire|de\s+fin)|présent(?:er|ez)[^.!?]*écritures?)/i;
+  const JOURNAL_PATTERN=/(?:\benregistr(?:er|ez|ement)\b|au\s+journal|dans\s+le\s+journal|journalis(?:er|ez)|comptabilis(?:er|ez)|pass(?:er|ez)\s+(?:l['’]\s*)?écriture|écritures?\s+(?:comptables?|nécessaires?|d['’]inventaire|de\s+fin)|présent(?:er|ez)[^.!?]*écritures?)/i;
 
   function normalize(value){return String(value??'').replace(/\s+/g,' ').trim()}
   function directPromptNode(question){return [...question.children].find(child=>child.tagName==='P'||child.tagName==='SPAN')||null}
