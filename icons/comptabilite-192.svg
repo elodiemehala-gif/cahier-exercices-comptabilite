@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" viewBox="0 0 512 512" role="img" aria-label="Comptabilité">
+  <defs>
+    <linearGradient id="bg" x1="64" y1="40" x2="448" y2="472" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0f2638"/>
+      <stop offset="1" stop-color="#07111f"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="136" y1="120" x2="384" y2="398" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#63d7b0"/>
+      <stop offset="1" stop-color="#8d6cff"/>
+    </linearGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="13" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="512" height="512" rx="116" fill="url(#bg)"/>
+  <rect x="34" y="34" width="444" height="444" rx="92" fill="none" stroke="#213149" stroke-width="8"/>
+  <circle cx="256" cy="256" r="145" fill="#0d1a2b" stroke="url(#accent)" stroke-width="9" filter="url(#glow)"/>
+  <path d="M177 156h158c18 0 33 15 33 33v156c0 18-15 33-33 33H177c-18 0-33-15-33-33V189c0-18 15-33 33-33Z" fill="#111f33" stroke="#63d7b0" stroke-width="7"/>
+  <path d="M178 211h156M178 267h156M178 323h156M232 157v220" stroke="#96a2b7" stroke-width="7" stroke-linecap="round" opacity=".75"/>
+  <path d="M278 305l25-31 26 18 34-49" fill="none" stroke="url(#accent)" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="278" cy="305" r="8" fill="#63d7b0"/><circle cx="303" cy="274" r="8" fill="#70c6be"/><circle cx="329" cy="292" r="8" fill="#7bb0ce"/><circle cx="363" cy="243" r="8" fill="#8d6cff"/>
+</svg>
