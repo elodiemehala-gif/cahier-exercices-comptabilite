@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="table-templates.css">
   <link rel="stylesheet" href="journal-grid.css">
+  <link rel="stylesheet" href="progress-tracker.css">
   <title>Comptabilité — Cahier d’exercices</title>
 </head>
 <body>
@@ -37,6 +38,13 @@
       <div class="hero-orbit" aria-hidden="true"><span>81</span><small>sujets</small></div>
       <button id="resetBtn" class="ghost">Réinitialiser</button>
     </section>
+
+    <nav id="workspaceNav" class="workspace-nav" aria-label="Navigation principale">
+      <button type="button" class="active" data-view="parcours"><span>⌘</span> Parcours</button>
+      <button type="button" data-view="suivi"><span>◎</span> Suivi</button>
+      <button type="button" data-view="agenda"><span>▣</span> Agenda</button>
+    </nav>
+
     <section id="app" aria-live="polite"></section>
   </main>
 
@@ -45,5 +53,6 @@
   <script src="app.js"></script>
   <script src="table-pills.js"></script>
   <script src="journal-grid.js"></script>
+  <script src="progress-tracker.js"></script>
 </body>
 </html>
