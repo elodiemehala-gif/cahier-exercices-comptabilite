@@ -5,6 +5,7 @@
   const JOURNAL_PATTERN=/(?:au\s+journal|dans\s+le\s+journal|journalis(?:er|ez)|comptabilis(?:er|ez)|pass(?:er|ez)\s+(?:l['’]\s*)?écriture|enregistr(?:er|ez)[^.!?]*(?:écriture|opération)|écritures?\s+(?:comptables?|nécessaires?|d['’]inventaire|de\s+fin)|présent(?:er|ez)[^.!?]*écritures?)/i;
 
   function normalize(value){return String(value??'').replace(/\s+/g,' ').trim()}
+  function directPromptNode(question){return [...question.children].find(child=>child.tagName==='P'||child.tagName==='SPAN')||null}
   function exerciseKey(){
     const label=document.querySelector('.exercise .eyebrow')?.textContent||'';
     const match=label.match(/THÈME\s+(\d+)\s+·\s+SUJET\s+(\d+)\//i);
@@ -13,10 +14,7 @@
   function questionNumber(question){
     return normalize(question.querySelector('.question-label span')?.textContent)||'1';
   }
-  function questionText(question){
-    const node=[...question.children].find(child=>child.matches?.(':scope > p, :scope > span'));
-    return normalize(node?.textContent);
-  }
+  function questionText(question){return normalize(directPromptNode(question)?.textContent)}
   function sourceOperations(){
     const statementPanel=[...document.querySelectorAll('.exercise-panel')].find(panel=>normalize(panel.querySelector('h3')?.textContent).toLowerCase()==='énoncé');
     if(!statementPanel)return[];
@@ -163,8 +161,9 @@
       workspace.appendChild(buildEntry(question,null,0,0));
     }
 
-    const textNode=[...question.children].find(child=>child.matches?.(':scope > p, :scope > span'));
-    textNode?.insertAdjacentElement('afterend',workspace);
+    const textNode=directPromptNode(question);
+    if(textNode)textNode.insertAdjacentElement('afterend',workspace);
+    else question.appendChild(workspace);
     moveNotes(question);
   }
   function enhance(){document.querySelectorAll('.question').forEach(enhanceQuestion)}
