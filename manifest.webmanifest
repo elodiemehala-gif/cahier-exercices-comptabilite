@@ -1,1 +1,37 @@
-{"name":"Cahier d’exercices de comptabilité","short_name":"Cahier compta","start_url":"./","display":"standalone","background_color":"#f5f7fb","theme_color":"#5b4bdb","lang":"fr","description":"81 exercices de comptabilité générale, structurés selon le cahier source"}
+{
+  "id": "./",
+  "name": "Comptabilité — Révisions DGFiP",
+  "short_name": "Comptabilité",
+  "description": "81 exercices de comptabilité générale avec suivi des erreurs, agenda et révision hors connexion.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "display_override": ["standalone", "minimal-ui"],
+  "orientation": "portrait-primary",
+  "background_color": "#07111f",
+  "theme_color": "#07111f",
+  "lang": "fr-FR",
+  "dir": "ltr",
+  "categories": ["education", "productivity"],
+  "prefer_related_applications": false,
+  "icons": [
+    {
+      "src": "icons/comptabilite-192.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/comptabilite-512.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/comptabilite-maskable.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ]
+}
