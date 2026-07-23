@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="Comptabilité">
+  <defs>
+    <linearGradient id="bg" x1="40" y1="20" x2="472" y2="492" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#123047"/>
+      <stop offset="1" stop-color="#07111f"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="160" y1="148" x2="360" y2="365" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#63d7b0"/>
+      <stop offset="1" stop-color="#8d6cff"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" fill="url(#bg)"/>
+  <circle cx="256" cy="256" r="170" fill="#0d1a2b" stroke="#213149" stroke-width="9"/>
+  <path d="M190 176h132c16 0 29 13 29 29v132c0 16-13 29-29 29H190c-16 0-29-13-29-29V205c0-16 13-29 29-29Z" fill="#111f33" stroke="url(#accent)" stroke-width="8"/>
+  <path d="M190 226h132M190 276h132M190 326h132M236 177v188" stroke="#96a2b7" stroke-width="7" stroke-linecap="round" opacity=".78"/>
+  <path d="M274 310l24-28 24 17 31-45" fill="none" stroke="url(#accent)" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="274" cy="310" r="8" fill="#63d7b0"/><circle cx="298" cy="282" r="8" fill="#70c6be"/><circle cx="322" cy="299" r="8" fill="#7bb0ce"/><circle cx="353" cy="254" r="8" fill="#8d6cff"/>
+</svg>
